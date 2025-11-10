@@ -1,0 +1,17 @@
+node_modules
+dist
+.next
+*.log
+.env
+.env.local
+.DS_Store
+*.md
+.git
+.gitignore
+README.md
+ASSIGNMENT.md
+LICENSE
+biome.json
+frontend/.dockerignore
+backend/.dockerignore
+

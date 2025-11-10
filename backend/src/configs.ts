@@ -1,18 +1,17 @@
 /**
- * We have hard coded the config values here for now.
- * We will load the values from the .env file in the real project.
+ * Load config values from environment variables with fallback defaults
  */
 
 const configs = {
-	port: 4000,
-	corsOrigin: "http://localhost:3000",
-	dbHost: "localhost",
-	dbPort: 5432,
-	dbUser: "postgres",
-	dbPassword: "postgres",
-	dbName: "rate-limiter",
+  port: Number(process.env.PORT) || 4000,
+  corsOrigin: process.env.CORS_ORIGIN || "http://localhost:3000",
+  dbHost: process.env.DB_HOST || "localhost",
+  dbPort: Number(process.env.DB_PORT) || 5432,
+  dbUser: process.env.DB_USER || "postgres",
+  dbPassword: process.env.DB_PASSWORD || "postgres",
+  dbName: process.env.DB_NAME || "rate-limiter",
 };
 
 export function getConfigs() {
-	return configs;
+  return configs;
 }
