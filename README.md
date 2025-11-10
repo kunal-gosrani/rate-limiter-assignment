@@ -2,6 +2,27 @@
 
 A small full-stack system where a user can call an API and that API is rate limited per-user
 
+## Getting Started
+
+### Running the Application
+
+To run the entire application using Docker Compose:
+
+```bash
+docker-compose up
+```
+
+This will start all services:
+- **Frontend UI**: http://localhost:3000
+- **Backend API**: http://localhost:4000
+- **PostgreSQL Database**: Running on port 5432
+
+The application will automatically:
+- Build the Docker images for frontend and backend
+- Set up the PostgreSQL database
+- Run database migrations
+- Start all services
+
 ## Tech Stack
 
 ### Backend
