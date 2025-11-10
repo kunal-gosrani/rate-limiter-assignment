@@ -2,6 +2,10 @@
  * Load config values from environment variables with fallback defaults
  */
 
+import { configDotenv } from "dotenv";
+
+configDotenv();
+
 const configs = {
   port: Number(process.env.PORT) || 4000,
   corsOrigin: process.env.CORS_ORIGIN || "http://localhost:3000",
