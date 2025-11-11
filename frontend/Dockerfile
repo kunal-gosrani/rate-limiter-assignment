@@ -22,7 +22,6 @@ COPY frontend/next.config.ts ./
 COPY frontend/tsconfig.json ./
 COPY frontend/postcss.config.mjs ./
 COPY frontend/components.json ./
-COPY frontend/next-env.d.ts ./
 RUN npm run build
 
 # Production image
